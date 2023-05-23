@@ -1,0 +1,8 @@
+.snapshots/
+.next/
+.vercel/
+build/
+dist/
+docs/
+*.yaml
+*.d.ts

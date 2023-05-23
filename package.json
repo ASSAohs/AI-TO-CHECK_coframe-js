@@ -1,0 +1,46 @@
+{
+  "name": "coframe-ai",
+  "version": "0.0.9",
+  "description": "Coframe optimizes your website using generative AI and real-time learnings to deliver maximum impact to your audience like never before. Learn more at coframe.ai.",
+  "main": "coframe.js",
+  "scripts": {
+    "test": "test",
+    "build": "webpack"
+  },
+  "author": "Coframe",
+  "license": "MIT",
+  "keywords": [
+    "coframe",
+    "optimization",
+    "AI",
+    "artificial intelligence",
+    "generative AI",
+    "website optimization",
+    "conversion rate",
+    "A/B testing",
+    "personalization",
+    "content optimization",
+    "copy optimization",
+    "real-time"
+  ],
+  "directories": {
+    "lib": "lib",
+    "test": "tests"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Coframe/coframe-js.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Coframe/coframe-js/issues"
+  },
+  "homepage": "https://coframe.ai",
+  "devDependencies": {
+    "jest": "^29.5.0",
+    "webpack": "^5.83.1",
+    "webpack-cli": "^5.1.1"
+  },
+  "dependencies": {
+    "node-fetch": "^3.3.1"
+  }
+}
