@@ -2,6 +2,10 @@
 
 > Bring your UX to life with AI-powered optimization and personalization
 
+[![NPM](https://img.shields.io/npm/v/coframe-ai.svg)](https://www.npmjs.com/package/coframe-ai) [![Build Status](https://github.com/Coframe/coframe-js/actions/workflows/tests.yml/badge.svg)](https://github.com/Coframe/coframe-js/actions/workflows/tests.yml)
+
+![Coframe Banner](https://files.readme.io/bb129ac-small-coframe-banner.png)
+
 Coframe brings the content of your app or website to life through AI-powered optimization and personalization. It takes minutes to integrate, and the ROI is easily and clearly measurable.
 
 ## Table of Contents
@@ -25,6 +29,8 @@ Once you've signed up and logged in, you'll be directed to the dashboard, where 
 ### Step 3: Create a New Coframe
 
 Click the "New Coframe" button to start optimizing a section of text or images on your website.
+
+*Full documentation can be found at https://docs.coframe.ai/.*
 
 ## Coframe Configuration
 
