@@ -1,4 +1,8 @@
-import { replaceText, getVariants, sendDataToBackend } from '../lib/coframe';
+import { getVariants, sendDataToBackend } from '../lib/coframe';
+import { replaceText } from '../lib/utils'
+import fetch from 'cross-fetch';
+
+global.fetch = fetch;
 
 describe('coframe module', () => {
     describe('replaceText', () => {
@@ -33,7 +37,7 @@ describe('coframe module', () => {
 describe('getVariants', () => {
         test('it should fetch variant data from the API', async () => {
             // Setup
-            const mockApiResponse = { "variants": [], "session_ids": [] }; // Match your actual expected response structure
+            const mockApiResponse = { "variants": [], "session_ids": [] };
             const mockJsonPromise = Promise.resolve(mockApiResponse);
             const mockFetchPromise = Promise.resolve({
                 json: () => mockJsonPromise,
@@ -41,7 +45,7 @@ describe('getVariants', () => {
             jest.spyOn(global, 'fetch').mockImplementation(() => mockFetchPromise);
 
             // Run
-            const response = await getVariants('testPageId');
+            const response = await getVariants('dummy_id');
 
             // Assert
             expect(global.fetch).toHaveBeenCalledTimes(1);
@@ -51,7 +55,7 @@ describe('getVariants', () => {
                 'Content-Type': 'application/json',
                 },
             });
-            expect(response).toEqual(mockApiResponse); // Check that the function returns the correct data
+            expect(response).toEqual(mockApiResponse);
 
             // Cleanup
             global.fetch.mockClear();
@@ -61,16 +65,15 @@ describe('getVariants', () => {
     describe('sendDataToBackend', () => {
         test('it should send data to the API', async () => {
         // Setup
-            const mockApiResponse = { "message": "Sessions updated successfully" }; // Match your actual expected response structure
-            const mockJsonPromise = Promise.resolve(mockApiResponse);
+            const mockApiResponse = { "message": "Sessions updated successfully" };
             const mockFetchPromise = Promise.resolve({
-                json: () => mockJsonPromise,
+                json: () => Promise.resolve(mockApiResponse),
             });
             jest.spyOn(global, 'fetch').mockImplementation(() => mockFetchPromise);
-
+    
             // Run
             const response = await sendDataToBackend({});
-
+    
             // Assert
             expect(global.fetch).toHaveBeenCalledTimes(1);
             expect(global.fetch).toHaveBeenCalledWith(expect.any(String), {
@@ -80,8 +83,8 @@ describe('getVariants', () => {
                 },
                 body: expect.any(String),
             });
-            expect(response).toEqual(mockApiResponse); // Check that the function returns the correct data
-
+            expect(response).toEqual(mockApiResponse);
+    
             // Cleanup
             global.fetch.mockClear();
         });
