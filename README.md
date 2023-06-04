@@ -6,7 +6,7 @@
 
 ![Coframe Banner](https://files.readme.io/bb129ac-small-coframe-banner.png)
 
-Coframe brings the content of your app or website to life through AI-powered optimization and personalization. It takes minutes to integrate, and the ROI is easily and clearly measurable.
+Coframe brings the content of your app or website to life through AI-powered optimization, personalization, and overall self-improvement. It takes minutes to integrate, and the ROI is clear to measure.
 
 ## Table of Contents
 
