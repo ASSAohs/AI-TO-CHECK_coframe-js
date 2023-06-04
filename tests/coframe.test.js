@@ -45,15 +45,16 @@ describe('getVariants', () => {
             jest.spyOn(global, 'fetch').mockImplementation(() => mockFetchPromise);
 
             // Run
-            const response = await getVariants('dummy_id');
+            const response = await getVariants('dummy_id', new Date(), {}, 'dummy_referrer');
 
             // Assert
             expect(global.fetch).toHaveBeenCalledTimes(1);
             expect(global.fetch).toHaveBeenCalledWith(expect.any(String), {
-                method: 'GET',
+                method: 'POST',
                 headers: {
                 'Content-Type': 'application/json',
                 },
+                body: expect.any(String),
             });
             expect(response).toEqual(mockApiResponse);
 
