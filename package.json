@@ -1,7 +1,7 @@
 {
   "name": "coframe-ai",
-  "version": "0.1.2",
-  "description": "Coframe optimizes your website using generative AI and real-time learnings to deliver maximum impact to your audience like never before. Learn more at coframe.ai.",
+  "version": "0.1.3",
+  "description": "Coframe optimizes your website using generative AI and real-time learnings to deliver maximum impact to your audience and allow your site to improve itself as you sleep. Learn more at coframe.ai.",
   "main": "coframe.js",
   "scripts": {
     "test": "jest",
