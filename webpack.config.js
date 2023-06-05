@@ -1,12 +1,23 @@
 const path = require('path');
+const TerserPlugin = require('terser-webpack-plugin');
 
 module.exports = {
-  entry: './lib/index.js',
+  optimization: {
+    minimizer: [
+      new TerserPlugin({
+        terserOptions: {
+          keep_fnames: true
+        }
+      }),
+    ],
+  },
+  entry: './lib/coframe.js',
   output: {
     filename: 'coframe.min.js',
     path: path.resolve(__dirname, 'dist'),
-    library: 'Coframe',
+    library: 'Coframejs',
     libraryTarget: 'var',
   },
   mode: 'production',
+  
 };
