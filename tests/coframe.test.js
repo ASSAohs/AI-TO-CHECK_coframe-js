@@ -1,8 +1,4 @@
-import { getVariants, sendDataToBackend } from '../lib/coframe';
 import { replaceText } from '../lib/utils'
-import fetch from 'cross-fetch';
-
-global.fetch = fetch;
 
 describe('coframe module', () => {
     describe('replaceText', () => {
