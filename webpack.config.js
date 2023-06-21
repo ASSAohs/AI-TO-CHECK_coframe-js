@@ -13,7 +13,7 @@ module.exports = {
   },
   entry: './lib/coframe.js',
   output: {
-    filename: 'c.min.js',
+    filename: 'cf.min.js',
     path: path.resolve(__dirname, 'dist'),
     library: 'Coframejs',
     libraryTarget: 'var',
