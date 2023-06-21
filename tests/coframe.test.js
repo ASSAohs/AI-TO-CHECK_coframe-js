@@ -1,8 +1,8 @@
-import { replaceText } from '../lib/utils'
+import { replaceHTMLContent } from '../lib/utils'
 
 describe('coframe module', () => {
-    describe('replaceText', () => {
-        // Note: testing replaceText in isolation would require a DOM environment (e.g. jsdom)
+    describe('replaceHTMLContent', () => {
+        // Note: testing replaceHTMLContent in isolation would require a DOM environment (e.g. jsdom)
         test('it should replace all instances of the original text', () => {
             // Setup
             document.body.innerHTML = `
@@ -18,7 +18,7 @@ describe('coframe module', () => {
             const control = "Don't change this one!";
     
             // Run
-            replaceText(original, replacement);
+            replaceHTMLContent(original, replacement);
     
             // Assert
             const testCopy = document.getElementById('testCopy');
